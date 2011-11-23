@@ -6,6 +6,9 @@ Description
 
 All modules have been forked directly from [@millermedeiros](https://github.com/millermedeiros) [repo](https://github.com/millermedeiros/amd-utils/) - I've just taken the modules I was interested in and set-up my own examples.
 
+Example
+-------
+
 ~~~~ javascript
 // https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/filter
 function filterCallback(value, index, array) {
