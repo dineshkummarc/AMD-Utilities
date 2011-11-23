@@ -9,17 +9,39 @@ All modules have been forked directly from [@millermedeiros](https://github.com/
 Example
 -------
 
-~~~~ javascript
-// https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/filter
-function filterCallback(value, index, array) {
-	console.log(this, value, index, array);		
-	
-	return (value === 'a' || value === 'c') ? true : false; // keep either of these two values in new Array	
-}
+Path: http://amd:8888/Array/
 
-console.group('filter');
-	var A = filter(['a','b','c'], filterCallback),
-		B = filter(['a','b','c'], filterCallback, obj);
-	console.log(A, B);
-console.groupEnd();
+~~~~ html
+<!doctype html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>AMD Array Methods</title>
+	</head>
+	<body>
+		<script data-main="init" src="../require.js"></script>
+	</body>
+</html>
+~~~~
+
+~~~~ javascript
+require(['filter'], function(filter){
+	
+	var obj = { test:'abc' };
+	
+	// https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/filter
+	function filterCallback(value, index, array) {
+		console.log(this, value, index, array);		
+		
+		return (value === 'a' || value === 'c') ? true : false; // keep either of these two values in new Array
+		
+	}
+	
+	console.group('filter');
+		var A = filter(['a','b','c'], filterCallback),
+			B = filter(['a','b','c'], filterCallback, obj);
+		console.log(A, B);
+	console.groupEnd();
+	
+});
 ~~~~~
