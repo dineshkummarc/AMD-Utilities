@@ -21,4 +21,5 @@ define(function(){
     }
 
     return bind;
+    
 });

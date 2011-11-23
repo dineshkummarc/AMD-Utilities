@@ -14,4 +14,5 @@ define(['./indexOf', './filter'], function(indexOf, filter){
     }
 
     return unique;
+    
 });
